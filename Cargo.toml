@@ -1,0 +1,12 @@
+[package]
+name = "rust_aoc"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "2015/day01/a",
+    "2015/day01/b"
+]
+
+[dependencies]
