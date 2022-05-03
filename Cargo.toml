@@ -8,7 +8,9 @@ members = [
     "2015/day01/a",
     "2015/day01/b",
     "2015/day02/a",
-    "2015/day02/b"
+    "2015/day02/b",
+    "2015/day03/a",
+    "2015/day03/b"
 ]
 
 [dependencies]

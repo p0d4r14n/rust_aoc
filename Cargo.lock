@@ -19,5 +19,13 @@ name = "aoc_2015_day02_b"
 version = "0.1.0"
 
 [[package]]
+name = "aoc_2015_day03_a"
+version = "0.1.0"
+
+[[package]]
+name = "aoc_2015_day03_b"
+version = "0.1.0"
+
+[[package]]
 name = "rust_aoc"
 version = "0.1.0"
