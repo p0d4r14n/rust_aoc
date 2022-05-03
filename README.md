@@ -1,4 +1,4 @@
-# Advent of Code 2021
+# Advent of Code
 
 Personal solutions for [Advent of Code](https://adventofcode.com/) in Rust.
 
