@@ -8,7 +8,7 @@ fn calculate_square_feet(length: i32, width: i32, height: i32) -> i32 {
             smallest = side;
         }
     }
-    return 2 * sides[0] + 2 * sides[1] + 2 * sides[2] + smallest;
+    2 * sides[0] + 2 * sides[1] + 2 * sides[2] + smallest
 }
 
 fn get_total_square_feet(data: String) -> i32 {
@@ -21,7 +21,7 @@ fn get_total_square_feet(data: String) -> i32 {
             .collect();
         square_feet += calculate_square_feet(numbers[0], numbers[1], numbers[2]);
     }
-    return square_feet;
+    square_feet
 }
 
 fn main() {

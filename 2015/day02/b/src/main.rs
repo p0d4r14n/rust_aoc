@@ -3,7 +3,7 @@ use std::{fs::File, io::Read};
 fn calculate_feet(length: i32, width: i32, height: i32) -> i32 {
     let mut sides: [i32; 3] = [length, width, height];
     sides.sort();
-    return sides[0] * 2 + sides[1] * 2 + sides[0] * sides[1] * sides[2];
+    sides[0] * 2 + sides[1] * 2 + sides[0] * sides[1] * sides[2]
 }
 
 fn get_total_feet(data: String) -> i32 {
@@ -16,7 +16,7 @@ fn get_total_feet(data: String) -> i32 {
             .collect();
         feet += calculate_feet(numbers[0], numbers[1], numbers[2]);
     }
-    return feet;
+    feet
 }
 
 fn main() {

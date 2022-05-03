@@ -12,7 +12,7 @@ fn get_floor(instructions: String) -> i32 {
             _ => {}
         }
     }
-    return floor;
+    floor
 }
 
 fn main() {

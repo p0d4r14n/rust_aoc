@@ -17,7 +17,7 @@ fn get_basement_position(instructions: String) -> i32 {
             break;
         }
     }
-    return position;
+    position
 }
 
 fn main() {
