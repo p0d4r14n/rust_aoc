@@ -2,7 +2,7 @@ use std::{fs::File, io::Read};
 
 fn calculate_feet(length: i32, width: i32, height: i32) -> i32 {
     let mut sides: [i32; 3] = [length, width, height];
-    sides.sort();
+    sides.sort_unstable();
     sides[0] * 2 + sides[1] * 2 + sides[0] * sides[1] * sides[2]
 }
 
