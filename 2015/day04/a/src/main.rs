@@ -8,11 +8,17 @@ fn find_number(data: String) -> usize {
         hasher.update(format!("{}{}", data, i));
         let hash = format!("{:x}", hasher.finalize());
 
-        if hash.get(0..6).unwrap() == "00000" {
-            return i;
-        } else {
-            i += 1;
-            continue;
+        let mut zero_count = 0;
+        for c in hash.chars() {
+            if c == '0' {
+                zero_count += 1;
+                if zero_count == 5 {
+                    return i;
+                }
+            } else {
+                i += 1;
+                break;
+            }
         }
     }
 }
@@ -23,7 +29,7 @@ fn main() {
     f.read_to_string(&mut data)
         .expect("Error on read_to_string");
 
-    println!("Number: {:?}", find_number(data));
+    println!("Hash: {:?}", find_number(data));
 }
 
 #[cfg(test)]
