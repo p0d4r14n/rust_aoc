@@ -41,6 +41,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc_2015_day05_a"
+version = "0.1.0"
+
+[[package]]
+name = "aoc_2015_day05_b"
+version = "0.1.0"
+
+[[package]]
 name = "block-buffer"
 version = "0.10.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"

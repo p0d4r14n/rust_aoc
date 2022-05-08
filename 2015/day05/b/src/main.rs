@@ -1,9 +1,8 @@
-// Copy as template
 use std::{fs::File, io::Read};
 
 fn main() {
     let mut data = String::new();
-    let mut f = File::open("2015/day01/input.txt").expect("Error on File::open");
+    let mut f = File::open("2015/day05/input.txt").expect("Error on File::open");
     f.read_to_string(&mut data)
         .expect("Error on read_to_string");
 
