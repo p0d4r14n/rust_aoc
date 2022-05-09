@@ -10,13 +10,13 @@ fn main() {
     println!("Solution: {:?}", 123);
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
 
-    #[test]
-    fn test_1() {
-        // my test
-        assert_eq!(5, 5);
-    }
-}
+//     #[test]
+//     fn test_1() {
+//         // my test
+//         assert_eq!(5, 5);
+//     }
+// }
