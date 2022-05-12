@@ -61,36 +61,36 @@ mod tests {
     #[test]
     fn is_nice_string_1() {
         // ugknbfddgicrmopn is nice
-        assert_eq!(is_nice_string("ugknbfddgicrmopn"), true);
+        assert!(is_nice_string("ugknbfddgicrmopn"));
     }
 
     #[test]
     fn is_nice_string_2() {
         // aaa is nice
-        assert_eq!(is_nice_string("aaa"), true);
+        assert!(is_nice_string("aaa"));
     }
 
     #[test]
     fn is_nice_string_3() {
         // jchzalrnumimnmhp is naughty - it has no double letter
-        assert_eq!(is_nice_string("jchzalrnumimnmhp"), false);
+        assert!(!is_nice_string("jchzalrnumimnmhp"));
     }
 
     #[test]
     fn is_nice_string_4() {
         // haegwjzuvuyypxyu is naughty - it contains the string xy
-        assert_eq!(is_nice_string("haegwjzuvuyypxyu"), false);
+        assert!(!is_nice_string("haegwjzuvuyypxyu"));
     }
 
     #[test]
     fn is_nice_string_5() {
         // dvszwmarrgswjxmb is naughty - it contains only one vowel
-        assert_eq!(is_nice_string("dvszwmarrgswjxmb"), false);
+        assert!(!is_nice_string("dvszwmarrgswjxmb"));
     }
 
     #[test]
     fn is_nice_string_6() {
         // iabjgmbbhilrcyyp is naughty - it contains string ab
-        assert_eq!(is_nice_string("iabjgmbbhilrcyyp"), false);
+        assert!(!is_nice_string("iabjgmbbhilrcyyp"));
     }
 }

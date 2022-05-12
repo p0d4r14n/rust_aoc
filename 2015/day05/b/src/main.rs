@@ -89,30 +89,30 @@ mod tests {
     #[test]
     fn is_nice_string_1() {
         // qjhvhtzxzqqjkmpb is nice
-        assert_eq!(is_nice_string("qjhvhtzxzqqjkmpb"), true);
+        assert!(is_nice_string("qjhvhtzxzqqjkmpb"));
     }
 
     #[test]
     fn is_nice_string_2() {
         // xxyxx is nice
-        assert_eq!(is_nice_string("xxyxx"), true);
+        assert!(is_nice_string("xxyxx"));
     }
 
     #[test]
     fn is_nice_string_3() {
         // uurcxstgmygtbstg is naughty - it has no repeated letter
-        assert_eq!(is_nice_string("uurcxstgmygtbstg "), false);
+        assert!(!is_nice_string("uurcxstgmygtbstg"));
     }
 
     #[test]
     fn is_nice_string_4() {
         // ieodomkazucvgmuy is naughty - it has no double pair
-        assert_eq!(is_nice_string("ieodomkazucvgmuy"), false);
+        assert!(!is_nice_string("ieodomkazucvgmuy"));
     }
 
     #[test]
     fn is_nice_string_5() {
         // qpnxkuldeiituggg is naughty - it contains the string xy
-        assert_eq!(is_nice_string("qpnxkuldeiituggg"), false);
+        assert!(!is_nice_string("qpnxkuldeiituggg"));
     }
 }
