@@ -1,4 +1,3 @@
-// Copy as template
 use std::{collections::HashMap, fs::File, io::Read};
 
 fn init_matrix(size: usize) -> HashMap<String, bool> {
