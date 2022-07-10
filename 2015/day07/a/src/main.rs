@@ -45,27 +45,23 @@ fn get_wire_value(values: &mut HashMap<String, u16>, instruction: &Instruction) 
     let mut left_value: Option<u16> = None;
     if let Some(left) = &instruction.left {
         let parsed_left = left.parse::<u16>();
-        if parsed_left.is_err() {
-            if values.contains_key(left.as_str()) {
-                left_value = Some(*values.get(left.as_str()).unwrap());
-            } else {
-                return None;
-            }
+        if let Ok(parsed) = parsed_left {
+            left_value = Some(parsed);
+        } else if values.contains_key(left.as_str()) {
+            left_value = Some(*values.get(left.as_str()).unwrap());
         } else {
-            left_value = Some(parsed_left.unwrap());
+            return None;
         }
     }
 
     let right_value: u16;
     let parsed_right = instruction.right.parse::<u16>();
-    if parsed_right.is_err() {
-        if values.contains_key(instruction.right.as_str()) {
-            right_value = *values.get(instruction.right.as_str()).unwrap();
-        } else {
-            return None;
-        }
+    if let Ok(parsed) = parsed_right {
+        right_value = parsed;
+    } else if values.contains_key(instruction.right.as_str()) {
+        right_value = *values.get(instruction.right.as_str()).unwrap();
     } else {
-        right_value = parsed_right.unwrap();
+        return None;
     }
 
     if let Some(operation) = &instruction.operation {
